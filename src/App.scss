@@ -1,0 +1,230 @@
+$border-color: #bcbcbc;
+$font-color-main: #636363;
+
+body {
+    color: $font-color-main;
+}
+
+.circle-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h-center {
+    display: flex;
+    justify-content: center;
+}
+
+.v-center {
+    display: flex;
+    align-items: center;
+}
+
+// Header
+
+.header {
+    height: 70px;
+    box-shadow: 0px 5px 10px #cecece;
+}
+
+// ActionBar
+
+.filters {
+    // max-width: 1200px;
+    // margin: auto;
+    height: 80px;
+    padding: 0 30px;
+    justify-content: space-between;
+    .select-text {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    .search-bar-container {
+        display: flex;
+        input {
+            border: 1px solid #dddddd;
+            outline: unset;
+            padding-left: 5px;
+        }
+        button {
+            border: unset;
+            background-color: #dddddd;
+            color: #454545;
+            &:hover {
+                background-color: #979797;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .showing {
+        margin-top: 5px;
+        font-size: 14px;
+    }
+}
+
+// select dropdown
+
+.select-box {
+    border: unset;
+    outline: unset;
+    height: 25px;
+    font-size: 14px;
+    color: #454545;
+    cursor: pointer;
+}
+
+// home
+
+.home {
+    height: calc(100vh - 180px);
+    padding-top: 30px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.drink-container {
+    width: 1410px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+// drink card
+
+.drink-card {
+    cursor: pointer;
+    height: 320px;
+    width: 250px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    margin: 15px;
+    img {
+        width: 250px;
+        border-radius: 8px 8px 0px 0px;
+    }
+    .drink-name {
+        font-size: 16px;
+        height: 67px;
+        padding: 0 10px;
+        font-weight: 500;
+        word-wrap: break-word;
+    }
+
+    &:hover {
+        box-shadow: 0px 3px 10px 0px #cecece;
+    }
+}
+
+// cocktail
+
+.cocktail{
+    height: calc(100vh - 100px);
+    padding-top: 30px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    align-items: flex-start;
+    .cocktail-card{
+        margin: 30px 0;
+        width: 500px;
+        border: 1px solid #dddddd;
+        .p-images-container{
+            img{
+                width: 500px;
+            }
+        }
+
+        .p-detail{
+            padding: 20px 30px;
+            .p-drink-name{
+                font-size: 28px;
+                font-weight: 500;
+                margin-bottom: 10px;
+            }
+            .text-container{
+                display: flex;
+                justify-content: space-between;
+                div div{
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        .p-sum{
+            background-color: #dddddd;
+            padding: 10px;
+        }
+
+    }
+}
+
+// media query
+
+@media only screen and (min-width: 1500px) {
+    .filters{
+        width: 1500px;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 1450px) {
+    .drink-container {
+        width: 1130px;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .drink-container {
+        width: 850px;
+    }
+}
+
+@media only screen and (max-width: 870px) {
+    .drink-container {
+        width: 565px;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .drink-container {
+        width: unset;
+    }
+    .drink-card {
+        width: 100%;
+        .image {
+            display: flex;
+            justify-content: center;
+            background-color: #dddddd;
+            img {
+                border-radius: unset;
+            }
+        }
+    }
+
+    .filters{
+        padding: 15px 15px 0 15px;
+        align-items: unset;
+        flex-direction: column;
+        .search-bar-container {
+            margin-top: 15px;
+        }
+    }
+
+    .cocktail{
+        .cocktail-card{
+            width: 100vw;
+            .p-images-container{
+                img{
+                    width: 100vw;
+                }
+            }
+    
+            .p-detail{
+                padding: 15px 20px;
+
+            }
+    
+        }
+    }
+    
+}
