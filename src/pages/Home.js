@@ -12,7 +12,7 @@ export default function Home() {
             <ActionBar />
             <div className='home h-center'>
                 <div className='drink-container'>
-                    {state?.length  ? state.map(listData => <DrinkCard key={listData.idDrink} cardData={listData} />) : <></>}
+                    {state?.length ? state.map(listData => <DrinkCard key={listData.idDrink} cardData={listData} />) : <></>}
                 </div>
             </div>
         </>

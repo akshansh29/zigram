@@ -11,7 +11,7 @@ function App() {
       <Router>
         <Switch>
           <Route path="/cocktail/:drinkId" component={Cocktail} />
-          <Route path="/" component={Home} exact/>
+          <Route path="/" component={Home} exact />
           <Route>404 not found</Route>
         </Switch>
       </Router>

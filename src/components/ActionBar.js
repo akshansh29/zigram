@@ -30,9 +30,6 @@ const searchTypeList = [
     {
         key: 's=',
         name: 'Name'
-    }, {
-        key: 'i=',
-        name: 'ingredient '
     }
 ]
 
@@ -89,12 +86,12 @@ export default function ActionBar() {
         <div className='filters v-center'>
             <div>
                 <div className='select-text'>Drinks Filter</div>
-                <SelectDropdown list={drinkTypeList} selectChange={selectChange} />
+                <SelectDropdown name='filter' list={drinkTypeList} selectChange={selectChange} />
             </div>
             <div>
                 <div className='search-bar-container'>
-                    <SelectDropdown list={searchTypeList} selectChange={changeSearchType} />
-                    <input value={searchStr} onChange={(e) => setSearchStr(e.target.value)} />
+                    <SelectDropdown name='searchBy' list={searchTypeList} selectChange={changeSearchType} />
+                    <input id='search' value={searchStr} onChange={(e) => setSearchStr(e.target.value)} />
                     <button onClick={onClickSearch}>Search</button>
                 </div>
                 <div className='showing'>List is showing by <b>{showBy}</b></div>
